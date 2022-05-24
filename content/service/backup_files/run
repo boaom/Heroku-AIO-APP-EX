@@ -15,9 +15,9 @@ curl -s -u ${GLOBAL_USER}:${GLOBAL_PASSWORD} -H "Content-Type: application/json"
 
 # Back config files
 DIR_TMP="$(mktemp -d)"
-mkdir -p ${DIR_TMP}/config/qBittorrent ${DIR_TMP}/config/accounts
+mkdir -p ${DIR_TMP}/config/qBittorrent ${DIR_TMP}/accounts
 cp -r /mnt/data/config/qBittorrent/config ${DIR_TMP}/config/qBittorrent
-cp -r /mnt/data/config/accounts ${DIR_TMP}/config/accounts
+cp -r /mnt/data/accounts ${DIR_TMP}/accounts
 cp -r /mnt/data/config/olivetin ${DIR_TMP}/config
 cp /mnt/data/config/* ${DIR_TMP}/config
 tar -zcf ${DIR_TMP}/backup.tar.gz -C ${DIR_TMP} config
