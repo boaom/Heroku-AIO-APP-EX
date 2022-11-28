@@ -3,7 +3,7 @@
 DIR_TMP="$(mktemp -d)"
 
 # Install AriaNg
-wget -qO - https://github.com/mayswind/AriaNg/releases/download/1.2.4/AriaNg-1.2.4.zip | busybox unzip -qd /workdir/ariang -
+wget -qO - https://github.com/mayswind/AriaNg/releases/download/1.3.2/AriaNg-1.3.2.zip | busybox unzip -qd /workdir/ariang -
 sed -i 's|6800|443|g;s|protocol:"http"|protocol:"https"|g' /workdir/ariang/js/aria-ng-a87a79b0e7.min.js
 
 # Install Rclone WebUI
